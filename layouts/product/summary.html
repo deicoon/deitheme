@@ -2,7 +2,13 @@
 <div class="pure-u-1 pure-u-md-1-2">
     <div class="product-table product-table-biz product-table-selected">
         <div class="product-table-header listing-header {{ with .Params.Color }}{{.}}{{end}} {{ if isset .Params "availability" }}with-ribbon{{end}}" data-ribbon="{{ .Site.Data.l10n.product.soon }}">
-            <h2><a href="{{ .Permalink }}" class="product-table-headlink">{{ .Title }}</a></h2>
+            <h2>
+                {{ if (not (isset .Params "availability")) | or (eq .Params.availability "available") }}
+                    <a href="{{ .Permalink }}" class="product-table-headlink">{{ .Title }}</a>
+                {{else}}
+                    {{ .Title }}
+                {{end}}
+            </h2>
             <h4>{{ .Description | safeHTML}}</h4>
             {{ if (not (isset .Params "availability")) | or (eq .Params.availability "available") }}
                 <div class="product-more-wrapper"><a href="{{ .Permalink }}" class="product-more" title="{{ .Title }}">{{ .Site.Data.l10n.product.read_more }} ⟶</a></div>
