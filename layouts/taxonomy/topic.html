@@ -1,0 +1,18 @@
+{{ partial "header" . }}
+
+<div class="banner {{ with .Params.Headimage }}banner-img{{end}}">
+    <h1 class="banner-head banner-decorated deicolor">
+        {{ .Site.Data.l10n.post.posts_about }} <i>{{ .Title }}</i>.
+    </h1>
+</div>
+
+<div class="l-content">
+    <div class="information pure-g">
+        {{ range ( .Paginate (.Pages)).Pages }}
+            {{ .Render "summary"}}
+        {{ end }}
+    </div>
+    {{ partial "pagination.html" . }}
+</div> <!-- end l-content -->
+
+{{ partial "footer" . }}

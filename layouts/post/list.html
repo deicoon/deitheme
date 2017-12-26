@@ -12,7 +12,7 @@
 </div>
 <div class="l-content">
 	<div class="information pure-g">
-        {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
+        {{ range ( .Paginate (where .Data.Pages "Type" "post") ).Pages }}
             {{ .Render "summary"}}
         {{ end }}
     </div>

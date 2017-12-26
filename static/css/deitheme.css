@@ -573,3 +573,11 @@ a.unsplashtag {
     border-radius: 3px;
     margin-bottom: 5px;
 }
+
+p.paginator-newer {
+    text-align: right;
+}
+
+p.paginator-older {
+
+}
