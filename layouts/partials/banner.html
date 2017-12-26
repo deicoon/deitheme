@@ -1,0 +1,19 @@
+<div class="banner {{ with .Params.Headimage }}banner-img{{end}}" {{ with .Params.Headimage }}style="background-image: url({{ . | absURL }})"{{end}}>
+    <h1 class="banner-head 
+    {{ if eq .Type "product" }}
+        banner-decorated
+        {{ with .Params.Color }}{{.}}{{end}}
+    {{ end }}
+    ">
+        {{ with .Params.Headline }} 
+            {{ . | safeHTML}}
+        {{else}} 
+            {{ with .Title }} 
+                {{.}}.
+            {{else}}
+                {{ .Site.Title }}
+            {{end}}
+        {{end}}
+    </h1>
+</div>
+

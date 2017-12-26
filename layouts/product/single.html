@@ -1,0 +1,23 @@
+{{ partial "header" . }}
+{{ partial "banner" . }}
+<div class="l-content">
+    <div class="information pure-g">
+        <div class="pure-u-1 pure-u-md-1-1">
+            <div class="l-box">
+            	{{ range $index, $element := .Params.accroches }}
+            		{{ if eq $index 0 }}
+            		<p class="accroche">{{.}}</p>
+            		{{ else if eq $index 1 }}
+            		<p class="accroche center">{{.}}</p>
+            		{{ else if eq $index 2 }}
+            		<p class="accroche right">{{.}}</p>
+            		{{end}}
+                {{ end }}
+            </div>
+        </div>
+
+        {{ .Content }}
+    </div> <!-- end information -->
+</div> <!-- end l-content -->
+
+{{ partial "footer" . }}

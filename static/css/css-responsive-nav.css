@@ -1,0 +1,189 @@
+#responsivemenu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#responsivemenu {
+  height: 100%;
+}
+
+#responsivemenu .main-responsivemenu {
+  display: none;
+  height: 100%;
+}
+
+.main-responsivemenu {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-weight: 100;
+  color: #777;
+}
+
+#tm:checked + .main-responsivemenu {
+  display: block;
+}
+
+#responsivemenu input[type="checkbox"], 
+#responsivemenu ul span.drop-icon {
+  display: none;
+}
+
+#responsivemenu li, 
+#toggle-responsivemenu, 
+#responsivemenu .sub-responsivemenu {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, .05);
+}
+
+#responsivemenu li, 
+#toggle-responsivemenu {
+  border-width: 0 0 1px;
+}
+
+#responsivemenu .sub-responsivemenu {
+  border: none;
+  margin: 0 1em;
+  background-color: #444;
+}
+
+#responsivemenu .sub-responsivemenu li:last-child {
+  border-width: 0;
+}
+
+#responsivemenu li, 
+#toggle-responsivemenu, 
+#responsivemenu a {
+  position: relative;
+  display: block;
+  color: #777;
+  text-decoration: none;
+  background-color: white;
+}
+
+#toggle-responsivemenu, 
+#responsivemenu a {
+  padding: 0.4em 1.5em;
+}
+
+#responsivemenu a {
+  transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+}
+
+#responsivemenu a {
+  background-color: white;
+}
+
+#responsivemenu a:hover {
+  background-color: white;
+  color: #09c;
+}
+
+#responsivemenu .sub-responsivemenu {
+  display: none;
+}
+
+#responsivemenu input[type="checkbox"]:checked + .sub-responsivemenu {
+  display: block;
+}
+
+#responsivemenu .sub-responsivemenu a:hover {
+  color: #444;
+}
+
+#toggle-responsivemenu .drop-icon, 
+#responsivemenu li label.drop-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#responsivemenu label.drop-icon, #toggle-responsivemenu span.drop-icon {
+  padding: 0.4em 0.5em;
+  font-size: 1em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .125);
+  text-shadow: 0 0 0 transparent;
+  color: rgba(255, 255, 255, .75);
+}
+
+@media only screen and (min-width: 767px) {
+  #responsivemenu .main-responsivemenu {
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #toggle-responsivemenu, 
+  #responsivemenu label.drop-icon {
+    display: none;
+  }
+
+  #responsivemenu ul span.drop-icon {
+    display: inline-block;
+  }
+
+  #responsivemenu li {
+    float: left;
+    border-width: 0 1px 0 0;
+  }
+
+  #responsivemenu .sub-responsivemenu li {
+    float: none;
+  }
+
+  #responsivemenu .sub-responsivemenu {
+    border-width: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12em;
+    z-index: 3000;
+  }
+
+  #responsivemenu .sub-responsivemenu, 
+  #responsivemenu input[type="checkbox"]:checked + .sub-responsivemenu {
+    display: none;
+  }
+
+  #responsivemenu .sub-responsivemenu li {
+    border-width: 0 0 1px;
+  }
+
+  #responsivemenu .sub-responsivemenu .sub-responsivemenu {
+    top: 0;
+    left: 100%;
+  }
+
+ #responsivemenu .sub-responsivemenu .drop-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+  }
+
+  #responsivemenu li:hover > input[type="checkbox"] + .sub-responsivemenu {
+    display: block;
+  }
+}
+
+.top-disappearing-branding {
+  display: none;
+}
+
+.resped-branding {
+  padding: 0.4em 1.5em;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #ee6a50 !important;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+}
+
+@media only screen and (min-width: 767px) {
+  .top-disappearing-branding {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,575 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+    color: #526066;
+}
+
+h2, h3 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.6em;
+    text-align: justify;
+}
+
+.blog-post > h1, .blog-post-content > h1 {
+    font-weight: 500;
+    text-align: center;
+    margin-top: 0px;
+}
+
+h1.listed {
+    font-size: 1.8em;
+}
+
+.blog-post > h1 > a {
+    text-decoration: none;
+}
+
+.blog-post-content > h2 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin-top: 2em;
+}
+
+.blog-post-content > h3 {
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 2em;
+}
+
+.blog-post-content > h4 {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.post-read-more {
+    float: right;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.post-meta {
+    text-align: center;
+    font-weight: 200;
+}
+
+/*
+ * -- Layout Styles --
+ */
+.l-content {
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+/*
+ * -- MENU STYLES --
+ * Make the menu have a very faint box-shadow.
+ */
+.pure-menu {
+    text-align: center;
+}
+
+.pure-menu-brand {
+    color: #ee6a50;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+
+.pure-menu-heading {
+    font-weight: bolder;
+    text-transform: none;
+    font-size: 1.6em;
+    padding: .2em .5em;
+}
+
+.pure-menu-subtitle-stack {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0 10px 8px 0;
+    vertical-align: middle;
+}
+
+.pure-menu-subtitle-item {
+    font-size: 0.8em;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 100;
+}
+
+.pure-menu-link {
+    padding: .5em .7em;
+}
+
+.custom-wrapper {
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    overflow: visible;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    transition: height 0.5s;
+    vertical-align: middle;
+}
+
+.custom-wrapper.open {
+    height: 10em;
+}
+
+.force-horizalign {
+    display: flex; /* contexte sur le parent */
+    flex-direction: column; /* direction d'affichage verticale */
+    justify-content: center; /* alignement vertical */
+}
+
+/*.tricky-elongator {
+    height: 52px;
+    display: inline-block;
+    vertical-align: middle;
+}*/
+
+.custom-toggle {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.custom-toggle .bar {
+    background-color: #777;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 18px;
+    right: 7px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 767px) {
+
+    .custom-menu-3 {
+        text-align: left;
+    }
+
+    .custom-toggle {
+        display: block;
+    }
+
+    .custom-wrapper {
+        height: 2.1em;
+        /*overflow: hidden;*/
+    }
+
+    .pure-menu-heading {
+        font-size: 1.2em;
+    }
+    .pure-menu-subtitle-stack {
+        display: none;
+    }
+    .pure-menu-children {
+        left: 0;
+        top: initial;
+        width: 100%;
+    }
+    .pure-menu-children > .pure-menu-item > .pure-menu-link::before {
+        content: "—";
+        display: inline-block;
+        padding-right: .5em;
+        font-size: small;
+    }
+    .pure-menu-has-children > .pure-menu-children > .pure-menu-item {
+        text-align: left;
+        padding-left: 45vw;
+    }
+}
+
+@media (min-width: 767px) {
+    .top-menu {
+        float: right;
+        padding-right: 5%;
+        font-weight: 100;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    }
+    
+}
+
+.pure-menu-has-children > .pure-menu-link::after {
+    content: "\25BE";
+}
+
+/*
+ * -- BANNER --
+ * The top banner with the headings. By using a combination
+ * of `display: table;` and `display: table-cell;`, we can
+ * vertically center the text.
+ background-size: cover;
+ background: transparent url('http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg') 0 0 no-repeat fixed;
+ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
+ */
+
+.banner {
+    text-align: center;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 6vw;
+    display: table;
+}
+
+.banner-head {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 6vw;
+    color: black;
+    font-weight: 500;
+    white-space: nowrap;
+    /*text-shadow: 0 1px 1px black;*/
+}
+
+.banner-img {
+    background: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -7em;
+    background-attachment: fixed;
+    height: 40vw;
+    max-height: 300px;
+}
+.banner-img > .banner-head {
+    color: #fff;
+}
+
+.banner-decorated {
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+p.accroche {
+    font-style: italic;
+    color: black;
+    font-weight: 700;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+
+html:before, html:after, body:before, body:after {
+    content: "";
+    position: fixed;
+    background: #a5ebff;
+
+    /* etc. */
+}
+
+/*
+ * -- PRICING TABLE WRAPPER --
+ * This element wraps up all the pricing table elements
+ */
+ .product-tables,
+ .information {
+    max-width: 980px;
+    margin: 0 auto;
+ }
+.product-tables {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/*
+ * -- PRICING TABLE  --
+ * Every pricing table has the .product-table class
+ */
+.product-table {
+    margin: 0 0.5em 1.2em;
+    text-align: left;
+}
+
+.product-table-header {
+    background: #777;
+    color: #fff;
+    border-radius: 5px;
+    min-height: 105px;
+    height: 16vw;
+    max-height: 145px;
+    position: relative;
+}
+.listing-header h2 {
+    margin: 0;
+    padding-top: .8em;
+    padding-left: .8em;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: .05em;
+}
+.listing-header h4 {
+    margin: 0;
+    padding-top: .5em;
+    padding-left: 1.05em;
+    font-size: 0.9em;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+}
+.product-more-wrapper {
+    width: 100%;
+    margin-top: 1.8em;
+    padding-top: .1em;
+    padding-bottom: .3em;
+    text-align: right;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    bottom: 0px;
+}
+.product-more {
+    color: black;
+    text-decoration: none;
+    padding-right: 1em;
+}
+.product-table-headlink {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.greyed {
+    font-weight: 400;
+    font-style: italic;;
+}
+
+.lemon {
+  background-image: linear-gradient(to right, #ff9405 14.71%, #fff255);
+  color: #111;
+}
+{h1 h2 h3 h4 h5}.lemon {
+    color: #111;
+}
+.lemon > .product-more-wrapper .greyed {
+    color: #777;
+}
+.lemon > .product-more-wrapper {
+  background: rgba(255, 148, 5, 0.3);
+}
+.lemon > .product-more-wrapper:hover {
+  background: rgba(255, 242, 85, 0.3);
+}
+.lemon.with-ribbon:after {
+    background: lightgray;
+}
+
+.crimson {
+  background-image: linear-gradient(to right, #f2738d 0%, #DC143C 100%);
+  color: #fff;
+}
+.crimson > .product-more-wrapper .greyed {
+    color: #eee;
+}
+.crimson > .product-more-wrapper {
+  background: rgba(220, 20, 60, 0.46);
+}
+.crimson > .product-more-wrapper:hover {
+  background: rgba(242, 115, 141, 0.46);
+}
+.crimson.with-ribbon:after {
+    background: gray;
+}
+
+.spacegray {
+  background-image: linear-gradient(to right, #85aecc, #607d8b);
+}
+.spacegray > .product-more-wrapper > .product-more {
+    color: #eee;
+}
+{h1 h2 h3 h4 h5}.spacegray {
+    color: #fff;
+}
+.spacegray > .product-more-wrapper {
+  background: rgba(96, 125, 139, 0.46);
+}
+.spacegray > .product-more-wrapper:hover {
+  background: rgba(133, 174, 204, 0.46);
+}
+.spacegray.with-ribbon:after {
+    background: lightgray;
+    color: #111;
+}
+
+.deicolor {
+  background-color: #ee6a50;
+  color: #111;
+}
+{h1 h2 h3 h4 h5}.deicolor {
+    color: #111;
+}
+
+.with-ribbon {
+  position: relative;
+  overflow: hidden;
+}
+.with-ribbon:after {
+    content: attr(data-ribbon);
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    background: lightgray;
+    top: 12px;
+    padding-top: 0px;
+    text-align: center;
+    line-height: 15px;
+    font-size: 10px;
+    right: -20px;
+    transform: rotate(45deg);
+}
+
+.information-head {
+    color: black;
+    font-weight: 500;
+    font-size: 3.5vw;
+}
+
+
+
+.footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+}
+    .footer a {
+        color: #ddd;
+    }
+
+
+
+/*
+ * -- TABLET MEDIA QUERIES --
+ * On tablets, we want to slightly adjust the size of the banner
+ * text and add some vertical space between the various pricing tables
+ */
+@media(min-width: 767px) {
+    .product-table {
+        margin-bottom: 1em;
+    }
+
+}
+
+/*
+ * -- PHONE MEDIA QUERIES --
+ * On phones, we want to reduce the height and font-size of the banner further
+ */
+@media (min-width: 467px) {
+    .with-ribbon:after {
+        width: 100px;
+        height: 18px;
+        top: 16px;
+        padding-top: 1px;
+        line-height: 18px;
+        right: -23px;
+        font-size: 13px;
+    }
+}
+@media (min-width: 467px) {
+    .information-head {
+        font-size: inherit;
+    }
+    .listing-header h4 {
+	    font-weight: 200;
+	}
+	.greyed {
+	    font-weight: 200;
+	}
+	.post-meta {
+    	font-weight: 200;
+	}
+}
+@media (min-width: 667px) {
+    .banner {
+        margin-bottom: 2em;
+    }
+    .banner-head {
+        font-size: 2.3em;
+    }
+    .information-head {
+        font-size: inherit;
+    }
+    .listing-header h2 {
+        padding-left: .8em;
+        font-size: 1.5em;
+    }
+    .listing-header h4 {
+        padding-left: 1.2em;
+        font-size: 1em;
+    }
+    .with-ribbon:after {
+        width: 120px;
+        height: 25px;
+        top: 20px;
+        padding-top: 2px;
+        line-height: 25px;
+        right: -27px;
+        font-size: inherit;
+    }
+}
+
+@media (min-width: 767px) {
+    .product-tables {
+        margin-bottom: 3.125em;
+        max-width: 58.5em;
+    }
+}
+
+a.unsplashtag {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 4px 6px;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    display: inline-block;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}

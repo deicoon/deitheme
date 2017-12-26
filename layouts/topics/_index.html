@@ -1,0 +1,22 @@
+{{ partial "header" . }}
+
+<div class="banner {{ with .Params.Headimage }}banner-img{{end}}" {{ with .Params.Headimage }}style="background-image: url({{ . | absURL }})"{{end}}>
+    <h1 class="banner-head 
+    {{ with .CurrentSection.Params.color }}
+        banner-decorated
+        {{.}}
+    {{ end }}
+    ">
+        {{ .CurrentSection.Title }}.
+    </h1>
+</div>
+<div class="l-content">
+	<div class="information pure-g">
+        {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
+            {{ .Render "summary"}}
+        {{ end }}
+    </div>
+    {{ partial "pagination.html" . }}
+</div> <!-- end l-content -->
+
+{{ partial "footer" . }}

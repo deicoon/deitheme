@@ -1,0 +1,17 @@
+<div class="pure-u-1 pure-u-md-1-1 blog-post">
+    <h1 class="center listed"><a href="{{ .Permalink }}">{{ .Title | markdownify | safeHTML }}</a></h1>
+    {{ partial "post_meta" . }}
+
+    <div class="l-box blog-post-content">
+        <p>{{ with .Params.summary }}
+            {{ . | markdownify | safeHTML }}
+        {{ else }}
+            {{ .Summary }}
+        {{end}}
+
+        {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}" class="post-read-more">{{ .Site.Data.l10n.post.read_more }} ⟶</i></a>
+        {{ end }}
+        </p> 
+    </div>
+</div>

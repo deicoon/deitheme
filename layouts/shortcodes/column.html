@@ -1,0 +1,12 @@
+{{ if .IsNamedParams }}
+<div class="pure-u-1 pure-u-md-{{ .Get "frac" }}">
+    <div class="l-box">
+    	{{ if .Get "title" }}
+        <h3 class="information-head">{{ .Get "title" }}</h3>
+        {{end}}
+        <p>
+            {{ .Inner | markdownify }}
+        </p>
+    </div>
+</div>
+{{ end }}

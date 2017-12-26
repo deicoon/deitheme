@@ -1,0 +1,3 @@
+{{ if (not (isset .Params "availability")) | or (eq .Params.availability "available") }}
+    <li class="pure-menu-item"><a href="{{ .Permalink }}" class="pure-menu-link">{{ .Title }}</a></li>
+{{end}}

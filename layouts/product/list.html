@@ -1,7 +1,8 @@
 {{ partial "header" . }}
 {{ partial "banner" . }}
 <div class="l-content">
-    <div class="information pure-g">
+	{{ partial "product-grid" . }}
+	<div class="information pure-g">
 		{{ .Content }}
     </div> <!-- end information -->
 </div> <!-- end l-content -->
