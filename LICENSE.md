@@ -175,7 +175,7 @@ of your accepting any such warranty or additional liability.
 
 END OF TERMS AND CONDITIONS
 
-Copyright 2014 Raphael Riegger, 2015 Digitalcraftsman
+Copyright 2015 Digitalcraftsman, 2017 Perceval Faramaz ("deicoon")
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
