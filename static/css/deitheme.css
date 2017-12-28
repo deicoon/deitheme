@@ -12,6 +12,10 @@ h2, h3 {
     font-weight: 600;
 }
 
+h1, h2, h3, h4, h5, .footer, .pure-menu-brand {
+    font-family: "Archivo Narrow", "Trebuchet MS", Arial, sans-serif;
+}
+
 p {
     line-height: 1.6em;
     text-align: justify;
@@ -83,7 +87,6 @@ h1.listed {
 
 .pure-menu-brand {
     color: #ee6a50;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     display: inline-block;
     text-align: center;
 }
@@ -224,19 +227,19 @@ h1.listed {
     }
 }
 
-@media (min-width: 767px) {
+/*@media (min-width: 767px) {
     .top-menu {
         float: right;
         padding-right: 5%;
         font-weight: 100;
-        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-family: "Archivo Narrow", "Trebuchet MS", Arial, sans-serif;
     }
     
 }
 
 .pure-menu-has-children > .pure-menu-link::after {
     content: "\25BE";
-}
+}*/
 
 /*
  * -- BANNER --
@@ -353,6 +356,7 @@ html:before, html:after, body:before, body:after {
     font-weight: 400;
     text-transform: none;
     letter-spacing: normal;
+    font-family: inherit;;
 }
 .product-more-wrapper {
     width: 100%;
@@ -566,6 +570,20 @@ a.unsplashtag {
     text-decoration: none;
     padding: 4px 6px;
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    display: inline-block;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+a.pexelstag {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 4px 6px 4px 8px;
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 12px;
     font-weight: bold;
     line-height: 1.2;

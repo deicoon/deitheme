@@ -13,8 +13,9 @@
 }
 
 .main-responsivemenu {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: "Archivo Narrow", "Trebuchet MS", Arial, sans-serif;
   font-weight: 100;
+  font-size: 1.1em;
   color: #777;
 }
 
@@ -61,7 +62,7 @@
 
 #toggle-responsivemenu, 
 #responsivemenu a {
-  padding: 0.4em 1.5em;
+  padding: 0.3em 1.5em;
 }
 
 #responsivemenu a {
@@ -98,7 +99,7 @@
 }
 
 #responsivemenu label.drop-icon, #toggle-responsivemenu span.drop-icon {
-  padding: 0.4em 0.5em;
+  padding: 0.3em 0.5em;
   font-size: 1em;
   text-align: center;
   background-color: rgba(0, 0, 0, .125);
@@ -174,11 +175,11 @@
 }
 
 .resped-branding {
-  padding: 0.4em 1.5em;
+  padding: 0.3em 1.5em;
   font-size: 1.2em;
   font-weight: 700;
   color: #ee6a50 !important;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: "Archivo Narrow", "Trebuchet MS", Arial, sans-serif;
   text-align: center;
 }
 
