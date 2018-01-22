@@ -599,3 +599,42 @@ p.paginator-newer {
 p.paginator-older {
 
 }
+
+img {
+    max-width: 100%;
+}
+
+.image-slider {
+    position:relative;
+    display: inline-block;
+    line-height: 0;
+    width: 100%;
+}
+.image-slider img {
+    user-select: none;
+}
+.image-slider > div {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 15%;
+    max-width: 85%;
+    overflow: hidden;
+    resize: horizontal;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.image-slider > div:before {
+    content: '';
+    display: block;
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    resize: horizontal;
+    right: 0; bottom: 0;
+    background-clip: content-box;
+    background: linear-gradient(-45deg, black 50%, transparent 0);
+    -webkit-filter: drop-shadow(0 0 2px black);
+    filter: drop-shadow(0 0 2px black);
+}
