@@ -1,0 +1,7 @@
+{{ if .IsNamedParams }}
+<div class="image-slider">
+<div style="background-image:url({{ .Get "before" | absURL }});">
+</div>
+	<img src="{{ .Get "after" | absURL }}" />
+</div>
+{{ end }}

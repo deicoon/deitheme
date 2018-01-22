@@ -1,0 +1,3 @@
+{{ if .IsNamedParams }}
+  <p class="accroche {{ (.Get "align") }}">{{ (.Get "content") | markdownify }}</p>
+{{ end }}
