@@ -449,6 +449,10 @@ html:before, html:after, body:before, body:after {
     color: #111;
 }
 
+.striped-deicolor {
+    background-image: repeating-linear-gradient(150deg, #ee6a50, #ee6a50 30px, #fff 30px, #fff 60px);
+}
+
 .with-ribbon {
   position: relative;
   overflow: hidden;
@@ -637,4 +641,16 @@ img {
     background: linear-gradient(-45deg, black 50%, transparent 0);
     -webkit-filter: drop-shadow(0 0 2px black);
     filter: drop-shadow(0 0 2px black);
+}
+
+figure.medium-center > img {
+    width: 500px;
+    margin: auto;
+    margin-left: auto;
+    display: block;
+}
+
+figcaption > p {
+    font-size: 15px;
+    font-style: italic;
 }

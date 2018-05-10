@@ -1,8 +1,9 @@
 <div class="banner {{ with .Params.Headimage }}banner-img{{end}}" {{ with .Params.Headimage }}style="background-image: url({{ . | absURL }})"{{end}}>
     <h1 class="banner-head 
     {{ if eq .Type "product" }}
-        banner-decorated
-        {{ with .Params.Color }}{{.}}{{end}}
+        {{ with .Params.Color }} banner-decorated {{.}}{{end}}
+    {{else}} 
+        {{ with .Scratch.Get "color" }} banner-decorated {{.}} {{end}}
     {{ end }}
     ">
         {{ with .Params.Headline }} 
